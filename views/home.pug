@@ -1,0 +1,135 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon" href="/img/logoParker.png" type="image/x-icon")
+    link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css")
+    link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+    link(rel="stylesheet" href="/css/style.css")
+    title PARKकर®️ | #{title}
+  body
+    #loader
+      h3 " Limited
+      h3 Spaces,
+      h3 Endless
+      h3 Circling "
+    #main
+      #page1
+        #cursor
+          h5 Book
+          h5 your
+          h5 slot
+        video(autoplay loop muted, src="/vid/1.mp4")
+        .login-page
+          .container
+            h1 Login
+            form.form-login
+              .credentials
+                input#email-login(type="text" placeholder="Email address", required)
+                i.bx.bxs-user
+              .credentials
+                input#password-login(type="password" placeholder="Password", required)
+                i.bx.bxs-lock-alt
+              .extra
+                label
+                  input(type="checkbox")
+                  | Remember me
+                a#forgotPassword Forgot password?
+              button.btn(type="submit") Login
+              .register-link
+                p
+                  | Don't have an account? 
+                  a(href="#" id="register") Register
+        .signup-page
+          .signup-container
+            h1 Sign Up
+            form.form-signup
+              .signup-credentials
+                input#name-signup(type="text" placeholder="Full Name", required)
+                i.bx.bxs-user
+              .signup-credentials
+                input#email-signup(type="text" placeholder="Email", required)
+                i.bx.bx-envelope
+              .signup-credentials
+                input#password-signup(type="password" placeholder="Password", required)
+                i.bx.bxs-lock-alt
+              .signup-credentials
+                input#passwordConfirm-signup(type="password" placeholder="Confirm Password", required)
+                i.bx.bxs-lock-alt
+              button.signup-btn(type="submit") Sign Up
+        #page1-content
+          nav
+            h3
+              a(href="#") The Parking Allotment Venture
+            #nav-part2
+              if user
+                h4#menu
+                  a(href="#") Menu
+                h4
+                  a(href="/me")
+                    img(class="user-img" src=`/img/users/${user.photo}` alt="User Photo")  
+                h4
+                  a.logout__btn Log Out
+              else
+                h4#menu
+                  a(href="#") Menu
+                h4#signUp
+                  a(href="#") Sign Up
+                h4#logIn
+                  a(href="#") Log In
+          .menu
+            h4
+              a(href="#page4") About us
+            h4
+              a(href="#page3") List Parking
+            h4
+              a(href="#page3") Find Parking
+          h1
+            span p
+            span a
+            span r
+            span k
+            span क
+            span र
+      #page3
+        video(autoplay loop muted, src=`/vid/2.mp4`)
+        #page3-top
+          h2
+            span.explore Explore
+            span.ourservice our services
+        main.page-content
+          .card
+            .content
+              h2.title Find Parking
+              p.copy Find a space for your car
+              button.parking-btn#findParking Find Parking
+          .card
+            .content
+              h2.title List Parking
+              p.copy List your parking space today
+              button.parking-btn#listParking Enlist Now
+      #page4
+        #page4-top
+          h1
+            span Get
+            | 
+            span.intouch in touch.
+          h3 Welcome to our cutting-edge parking management system driven by machine learning! We're dedicated to transforming how businesses handle parking, giving founders and companies a unique edge in resource optimization.
+        hr.custom-hr
+        #swiperDiv
+          .swiper.mySwiper
+            .swiper-wrapper
+              .swiper-slide
+                img(src="/img/5.jpg" alt="parking")
+                img(src="/img/7.jpg" alt="parking")
+                img(src="/img/6.jpg" alt="parking")
+                img(src="/img/8.jpg" alt="parking")
+              .swiper-slide
+                img(src="/img/1.jpg" alt="parking")
+                img(src="/img/2.jpg" alt="parking")
+                img(src="/img/3.jpg" alt="parking")
+                img(src="/img/4.jpg" alt="parking")
+      include _footer               
+    script(src="/js/bundle.js")  

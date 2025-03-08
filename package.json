@@ -1,0 +1,52 @@
+{
+  "name": "parking-solutions",
+  "version": "1.0.0",
+  "description": "MATCOM project ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "start:prod": "NODE_ENV=production nodemon server.js",
+    "debug": "ndb server.js",
+    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+  },
+  "author": "Dhruv Chauhan",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "aos": "^2.3.4",
+    "axios": "^1.6.8",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "childprocess": "^2.0.2",
+    "cookie-parser": "^1.4.6",
+    "core-js": "^2.6.12",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^7.2.0",
+    "gsap": "^3.12.5",
+    "helmet": "^7.1.0",
+    "html-to-text": "^9.0.5",
+    "jsonwebtoken": "^9.0.2",
+    "locomotive-scroll": "^4.1.4",
+    "mongoose": "^8.2.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.11",
+    "nodemon": "^3.1.0",
+    "pug": "^3.0.2",
+    "sharp": "^0.33.3",
+    "slugify": "^1.6.6",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5",
+    "stripe": "^14.23.0",
+    "swiper": "^11.0.7",
+    "validator": "^13.11.0",
+    "xss-clean": "^0.1.4"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

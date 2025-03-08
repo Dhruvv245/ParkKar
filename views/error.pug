@@ -1,0 +1,71 @@
+extends base
+
+block content
+    #main
+        #page1
+            video(autoplay loop muted, src="/vid/1.mp4" style="filter: blur(7px);")
+            .login-page
+                .container
+                    h1 Login
+                    form.form-login
+                        .credentials
+                            input#email-login(type="text" placeholder="Email address", required)
+                            i.bx.bxs-user
+                        .credentials
+                            input#password-login(type="password" placeholder="Password", required)
+                            i.bx.bxs-lock-alt
+                        .extra
+                            label
+                                input(type="checkbox")
+                                | Remember me
+                            a#forgotPassword Forgot password?
+                        button.btn(type="submit") Login
+                        .register-link
+                            p
+                                | Don't have an account? 
+                                a(href="#" id="register") Register
+            .signup-page
+                .signup-container
+                    h1 Sign Up
+                    form.form-signup
+                        .signup-credentials
+                            input#name-signup(type="text" placeholder="Full Name", required)
+                            i.bx.bxs-user
+                        .signup-credentials
+                            input#email-signup(type="text" placeholder="Email", required)
+                            i.bx.bx-envelope
+                        .signup-credentials
+                            input#password-signup(type="password" placeholder="Password", required)
+                            i.bx.bxs-lock-alt
+                        .signup-credentials
+                            input#passwordConfirm-signup(type="password" placeholder="Confirm Password", required)
+                            i.bx.bxs-lock-alt
+                        button.signup-btn(type="submit") Sign Up
+            #page1-content
+                nav
+                    h3
+                        a(href="#") The Parking Allotment Venture
+                    #nav-part2
+                        if user
+                            h4#menu
+                                a(href="#") Menu
+                            h4
+                                a(href="/me")
+                                    img(class="user-img" src=`/img/users/${user.photo}` alt="User Photo")  
+                            h4
+                                a.logout__btn Log Out
+                        else
+                            h4#menu
+                                a(href="#") Menu
+                            h4#signUp
+                                a(href="#") Sign Up
+                            h4#logIn
+                                a(href="#") Log In
+                .menu
+                    h4
+                        a(href="/") Home
+                    h4
+                        a(href="/listParking") List Parking
+                    h4
+                        a(href="/findParking") Find Parking
+                h2= msg

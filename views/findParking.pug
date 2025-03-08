@@ -1,0 +1,9 @@
+extends baseTry 
+block append head   
+    script(src='https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js')
+    link(href='https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css' rel='stylesheet')
+    link(href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet")
+    link(rel="stylesheet" href="/css/findParking.css")
+block content 
+    section.section-map
+        #map(data-parkings=`${JSON.stringify(parkings)}`)

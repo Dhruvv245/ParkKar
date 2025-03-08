@@ -1,0 +1,33 @@
+extends baseTry
+
+block content
+    main.main 
+        .card-container
+            if parkings.length
+                each parking in parkings
+                    .card
+                        .card__header
+                            .card__picture
+                                .card__picture-overlay &nbsp;
+                                img.card__picture-img(src=`/img/parkings/${parking.imageCover}`, alt=`${parking.name}`)
+                            h3.heading-tertirary
+                                span= parking.name
+
+                        .card__details
+                            p.card__text= parking.location.address
+                            .card__data
+                                span= `Max Slots ${parking.maxSlots}`
+
+                        .card__footer
+                            p
+                                span.card__footer-value= `Rs${parking.price}`
+                                | 
+                                span.card__footer-text per hour
+                            p.card__ratings
+                                span.card__footer-value= parking.ratingsAverage
+                                | 
+                                span.card__footer-text= `rating (${parking.ratingsQuantity})`
+                            a.btn.btn--green.btn--small(href=`/parking/${parking.slug}`) Details
+            else
+                .no-bookings
+                    p No bookings yet.

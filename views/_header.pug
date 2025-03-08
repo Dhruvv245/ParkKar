@@ -1,0 +1,77 @@
+#overlay
+#popup    
+    .login-page
+        .container
+            h1 Login
+            form.form-login
+                .credentials
+                    input#email-login(type="text" placeholder="Email address", required)
+                    i.bx.bxs-user
+                .credentials
+                    input#password-login(type="password" placeholder="Password", required)
+                    i.bx.bxs-lock-alt
+                .extra
+                    label
+                        input(type="checkbox")
+                        | Remember me
+                    a#forgotPassword Forgot password?
+                button.btn(type="submit") Login
+                .register-link
+                    p
+                        | Don't have an account? 
+                        a(href="#" id="register") Register
+    .signup-page
+        .signup-container
+            h1 Sign Up
+            form.form-signup
+                .signup-credentials
+                    input#name-signup(type="text" placeholder="Full Name", required)
+                    i.bx.bxs-user
+                .signup-credentials
+                    input#email-signup(type="text" placeholder="Email", required)
+                    i.bx.bx-envelope
+                .signup-credentials
+                    input#password-signup(type="password" placeholder="Password", required)
+                    i.bx.bxs-lock-alt
+                .signup-credentials
+                    input#passwordConfirm-signup(type="password" placeholder="Confirm Password", required)
+                    i.bx.bxs-lock-alt
+                button.signup-btn(type="submit") Sign Up
+
+header.header
+    nav.nav.nav--tours
+        if title===`Find Parking`
+            .search-container
+                form(class="search" id="search-bar")
+                    input#search-input(type="search" placeholder="Parkings near me..." class="search__input")
+                    .search__button#search-button
+                        i(class="ri-search-2-line search__icon")
+                        i(class="ri-close-line search__close") 
+        else
+            a.nav__el(href=`/`) Home
+    //- .header__logo 
+    //-     img(src=`/img/logoParker.png`, alt=`PARKकर®️ logo`)   
+    nav.nav
+        #nav-part2
+            if user
+                h4#menu   
+                    a Menu 
+                h4
+                    a.logout__btn Log Out
+                h4    
+                    a(href=`/me`)
+                        img(class="user-img" src=`/img/users/${user.photo}` alt="User Photo")
+            else
+                h4#menu
+                    a Menu
+                h4#signUp
+                    a Sign Up
+                h4#logIn
+                    a Log In
+    .menu
+        h4
+            a(href="/") Home
+        h4
+            a(href="/listParking") List Parking
+        h4
+            a(href="/findParking") Find Parking              

@@ -1,0 +1,85 @@
+extends baseTry 
+
+mixin reviewCard(review)
+    .reviews__card
+        .reviews__avatar
+            img.reviews__avatar-img(src=`/img/users/${review.user.photo}`, alt=`${review.user.name}`)
+            h6.reviews__user= review.user.name
+        p.reviews__text= review.review
+        .reviews__rating
+            each star in [1,2,3,4,5]
+                svg.reviews__star(class=`reviews__star--${review.rating>=star ? `active`:`inactive`}`)
+                    use(xlink:href='/img/icons.svg#icon-star')
+
+mixin overviewBox(label,text,icon)
+    .overview-box__detail
+        svg.overview-box__icon
+            use(xlink:href=`/img/icons.svg#icon-${icon}`)
+        span.overview-box__label= label
+        span.overview-box__text= text
+
+block append head 
+    script(src="https://js.stripe.com/v3/")
+
+block content 
+    section.section-header
+        .header__hero
+            .header__hero-overlay &nbsp;
+            img.header__hero-img(src=`/img/parkings/${parking.imageCover}`, alt=`${parking.name}`)
+
+        .heading-box
+            h1.heading-primary
+                span= `${parking.name}`
+            .heading-box__group
+                .heading-box__detail
+                    svg.heading-box__icon
+                        use(xlink:href='/img/icons.svg#icon-map-pin')
+                    span.heading-box__text= parking.location.address
+
+    section.section-description
+        .overview-box
+            div
+            .overview-box__group
+                h2.heading-secondary.ma-bt-lg Quick facts
+                - const date = (new Date()).toLocaleString('en-us', { month: 'long', year: 'numeric',day:'numeric' })
+                +overviewBox('Date',date,'calendar')
+                +overviewBox('Max Slots',`${parking.maxSlots}`,'user')
+                +overviewBox('Price',`₹${parking.price} / hour`,'credit-card')
+                +overviewBox('Rating',`${parking.ratingsAverage} / 5`,'star')
+                .overview-box__group
+                    h2.heading-secondary.ma-bt-lg Parking Owner
+                    .overview-box__detail
+                        img.overview-box__img(src=`/img/users/${parking.owner.photo}`, alt=`${parking.owner.name}`)
+                        span.overview-box__text= parking.owner.name
+                    +overviewBox('Email',`${parking.owner.email}`,'mail')
+                    if parking.owner.phoneNumber
+                        +overviewBox('Phone',`${parking.owner.phoneNumber}`,'phone')
+
+        .description-box
+            h2.heading-secondary.ma-bt-lg= `Free Slots :`
+                p.description__text#freeSlots(data-parkid=`${parking._id}`)= parking.freeSlots > 0 ? `${parking.freeSlots} slots free` : `Sorry, no slots available!`
+                p Booked Slots - #{bookings.length}
+
+    section.section-pictures
+        each img,i in parking.images
+            .picture-box
+                img.picture-box__img(src=`/img/parkings/${img}`, alt=`${parking.name} ${i+1}`,class=`picture-box__img--${i+1}`)
+
+    section.section-reviews
+        .reviews
+            each review in parking.reviews
+                +reviewCard(review)
+
+    section.section-cta
+        .cta
+            .cta__img.cta__img--logo
+                img(src='/img/logoParker.png' alt='PARKकर logo')
+            img.cta__img.cta__img--2(src=`/img/parkings/${parking.images[2]}`, alt='Parking Image')
+            img.cta__img.cta__img--1(src=`/img/parkings/${parking.images[1]}`, alt='Parking Image')
+            .cta__content
+                h2.heading-secondary What are you waiting for?
+                p.cta__text= `EASY BOOKING, NO TIME WASTE!`
+                if user
+                    button.btn.btn--green.span-all-rows#book-slot(data-parkingid=`${parking.id}`) Book slot now!    
+                else 
+                    a.btn.btn--green.span-all-rows(href='/') Log in to book slot

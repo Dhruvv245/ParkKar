@@ -1,0 +1,46 @@
+extends baseTry 
+
+block content
+    .listParking-container
+        h1 LIST PARKING 
+        p
+            b Please provide the required information and await verification!!!
+        form.listParking-form(data-currentuser=`${JSON.stringify(user)}`)
+            .credentials
+                input#parking-name(type='text' placeholder='Name of the parking' required='')
+            .credentials
+                input#parking-maxSlots(type='text' placeholder='Maximum parking slots' required='')
+            .credentials
+                input#parking-price(type='text' placeholder='Price of one parking slot per hour' required='')
+            .credentials
+                input#parking-description(type='text' placeholder='Description of the parking' required='')
+            .credentials
+                input#parking-address(type='text' placeholder='Address of the parking' required='')
+            .credentials
+                select#parking-type(required='')
+                    option(value='' disabled selected) Type of parking
+                    option(value='public') Public
+                    option(value='private') Private          
+            .credentials
+                select(required='')
+                    option(value='' disabled selected) Proof of ownership
+                        option(value='deed') Property Deed
+                        option(value='khata') Khata Certificate
+                        option(value='tax') Property Tax Receipt  
+            .credentials
+                input#phone-number(type='text' placeholder='Phone number' style='display: none;')             
+            .photo-upload
+                .id-upload
+                    label(for='parking-ownership') Upload a photo of your ownership proof:
+                    input.id-photo#parking-ownership(type='file' accept='image/*' required='')
+                    span#ownership-count
+                .plot-upload    
+                    label(for='parking-imageCover') Upload a cover image for your parking:
+                    input.id-photo#parking-imageCover(type='file' accept='image/*' required='')
+                    span#cover-count
+                .plot-upload    
+                    label(for='parking-images') Upload 3 photos of your parking space:
+                    input.id-photo#parking-images(type='file' accept='image/*' multiple required='')
+                    span#images-count
+            button.listParking-btn(type="submit")  ENLIST 
+        p.disclaimer By clicking on "Enlist", I affirm that the information provided above is accurate to the best of my knowledge. Any discrepancies, if discovered, may subject me to legal proceedings.    

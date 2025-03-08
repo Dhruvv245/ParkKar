@@ -1,0 +1,182 @@
+[
+  {
+    "location": {
+      "description": "Shimla, HP",
+      "type": "Point",
+      "coordinates": [77.18423182378021, 31.1029821369621],
+      "address": "452G+J76, Bemloi, Shimla, Himachal Pradesh 171001"
+    },
+    "role": "public",
+    "ratingsAverage": 5,
+    "ratingsQuantity": 9,
+    "images": ["parking-1-1.jpg", "parking-1-2.jpg", "parking-1-3.jpg"],
+    "_id": "5c88fa8cf4afda39709c2951",
+    "name": "Shimla Central Parking",
+    "maxSlots": 25,
+    "owner": "5c8a24a02f8fb814b56fa193",
+    "price": 397,
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "imageCover": "parking-1-cover.jpg",
+    "ownershipImage": "parking-1-proof.jpg"
+  },
+  {
+    "location": {
+      "description": "Delhi, IND",
+      "type": "Point",
+      "coordinates": [77.24240109367652, 28.642319820716956],
+      "address": "Car Parking, J6RG+F35, Kamla Market, Ajmeri Gate, New Delhi, Delhi, 110002"
+    },
+    "role": "public",
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "images": ["parking-2-1.jpg", "parking-2-2.jpg", "parking-2-3.jpg"],
+    "_id": "5c88fa8cf4afda39709c2955",
+    "name": "Car Parking",
+    "maxSlots": 15,
+    "owner": "5c8a24822f8fb814b56fa192",
+    "price": 497,
+    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "imageCover": "parking-2-cover.jpg",
+    "ownershipImage": "parking-2-proof.jpg"
+  },
+  {
+    "location": {
+      "description": "Mumbai, IND",
+      "type": "Point",
+      "coordinates": [72.88977046242714, 19.064011059675238],
+      "address": "3V89+9WX, G Block BKC, Bandra Kurla Complex, Bandra East, Mumbai, Maharashtra 400051"
+    },
+    "role": "public",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 6,
+    "images": ["parking-3-1.jpg", "parking-3-2.jpg", "parking-3-3.jpg"],
+    "_id": "5c88fa8cf4afda39709c295a",
+    "name": "Public Car Park Lot",
+    "maxSlots": 10,
+    "owner": "5c8a245f2f8fb814b56fa191",
+    "price": 997,
+    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!",
+    "imageCover": "parking-3-cover.jpg",
+    "ownershipImage": "parking-3-proof.jpg"
+  },
+  {
+    "location": {
+      "description": "Uttar Pradesh, IND",
+      "type": "Point",
+      "coordinates": [80.91303727092914, 26.869375908999075],
+      "address": " VW96+44V, Nimbu Park Rd, Machchhi Bhavan, Lucknow, Uttar Pradesh 226003"
+    },
+    "role": "public",
+    "ratingsAverage": 4.6,
+    "ratingsQuantity": 5,
+    "images": ["parking-4-1.jpg", "parking-4-2.jpg", "parking-4-3.jpg"],
+    "_id": "5c88fa8cf4afda39709c295d",
+    "name": "Jyotiba phoole Multilevel parking",
+    "maxSlots": 20,
+    "owner": "5c8a24402f8fb814b56fa190",
+    "price": 1197,
+    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet.\nConsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat!",
+    "imageCover": "parking-4-cover.jpg",
+    "ownershipImage": "parking-4-proof.jpg"
+  },
+  {
+    "location": {
+      "description": "Hyderabad, IND",
+      "type": "Point",
+      "coordinates": [78.49445526467557, 17.359322625911716],
+      "address": "9F5F+PGQ, SH 5, Kotla Alijah, Moghalpura, Hyderabad, Telangana 500002"
+    },
+    "role": "public",
+    "ratingsAverage": 3.6,
+    "ratingsQuantity": 7,
+    "images": ["parking-5-1.jpg", "parking-5-2.jpg", "parking-5-3.jpg"],
+    "_id": "5c88fa8cf4afda39709c2961",
+    "name": "Charminar Parking",
+    "maxSlots": 15,
+    "owner": "5c8a24282f8fb814b56fa18f",
+    "price": 1497,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!",
+    "imageCover": "parking-5-cover.jpg",
+    "ownershipImage": "parking-5-proof.jpg"
+  },
+  {
+    "location": {
+      "description": "Indore, MP",
+      "type": "Point",
+      "coordinates": [75.86991426317476, 22.718391791383134],
+      "address": "PV93+969, Bada Sarafa, Sarafa Bazar, Indore, Madhya Pradesh 452002"
+    },
+    "role": "private",
+    "ratingsAverage": 3.9,
+    "ratingsQuantity": 7,
+    "images": ["parking-6-1.jpg", "parking-6-2.jpg", "parking-6-3.jpg"],
+    "_id": "5c88fa8cf4afda39709c2966",
+    "name": "Multilevel Parking",
+    "maxSlots": 5,
+    "owner": "5c8a23de2f8fb814b56fa18e",
+    "price": 2997,
+    "description": "Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nVoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur!",
+    "imageCover": "parking-6-cover.jpg",
+    "ownershipImage": "parking-6-proof.jpg"
+  },
+  {
+    "location": {
+      "description": "BIHAR, IND",
+      "type": "Point",
+      "coordinates": [85.242688225615, 25.58093365412332],
+      "address": "Nakhaspind, karmalichak, Patna, Bihar 800009"
+    },
+    "role": "private",
+    "ratingsAverage": 4.4,
+    "ratingsQuantity": 7,
+    "images": ["parking-7-1.jpg", "parking-7-2.jpg", "parking-7-3.jpg"],
+    "_id": "5c88fa8cf4afda39709c296c",
+    "name": "Parking Zone",
+    "maxSlots": 1,
+    "owner": "5c8a23c82f8fb814b56fa18d",
+    "price": 1997,
+    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "imageCover": "parking-7-cover.jpg",
+    "ownershipImage": "parking-7-proof.jpg"
+  },
+  {
+    "location": {
+      "description": "Near Chemistry Department, NITH",
+      "type": "Point",
+      "coordinates": [76.526018, 31.708193],
+      "address": "PG5G+78Q, Hamirpur, Himachal Pradesh 177005"
+    },
+    "role": "private",
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "images": ["parking-8-1.jpg", "parking-8-2.jpg", "parking-8-3.jpg"],
+    "_id": "5c88fa8cf4afda39709c2970",
+    "name": "Chemistry Department Parking",
+    "maxSlots": 3,
+    "owner": "5c8a23412f8fb814b56fa18c",
+    "price": 2997,
+    "description": "Parking for all type of parkings",
+    "imageCover": "parking-8-cover.jpg",
+    "ownershipImage": "parking-8-proof.jpg"
+  },
+  {
+    "location": {
+      "description": "Near Nescafe, NITH",
+      "type": "Point",
+      "coordinates": [76.52810454375891, 31.707535938425952],
+      "address": "Central Block, PG5H+266, Hamirpur, Himachal Pradesh 177005"
+    },
+    "role": "private",
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 7,
+    "images": ["parking-9-1.jpg", "parking-9-2.jpg", "parking-9-3.jpg"],
+    "_id": "5c88fa8cf4afda39709c2974",
+    "name": "Central Block Parking",
+    "maxSlots": 2,
+    "owner": "5c8a22c62f8fb814b56fa18b",
+    "price": 1497,
+    "description": "Parking for two wheelers only.",
+    "imageCover": "parking-9-cover.jpg",
+    "ownershipImage": "parking-9-proof.jpg"
+  }
+]
