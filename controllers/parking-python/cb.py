@@ -5,9 +5,9 @@ import numpy as np
 import requests
 
 # Video feed
-cap = cv2.VideoCapture('D:/Parking Solns/controllers/parking-python/cbb.mp4')
+cap = cv2.VideoCapture('D:\ParkKar\ParkKar\controllers\parking-python\cbb.mp4')
 
-with open(r'D:\Parking Solns\controllers\parking-python\cbposn', 'rb') as f:
+with open(r'D:\ParkKar\ParkKar\controllers\parking-python\cbposn', 'rb') as f:
     posList = pickle.load(f)
 
 prev_parking_status = [False] * len(posList)
