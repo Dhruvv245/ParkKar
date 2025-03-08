@@ -35,7 +35,7 @@ def checkParkingSpace(imgPro):
             spaceCounter += 1
             occupied = False # parking space is free
         else:
-            color = (0, 0, 255)
+            color = (0, 0, 254)
             thickness = 2
             occupied = True # parking space is occupied
         # cv2.rectangle(img, pos, (pos[0] + width, pos[1] + height), color, thickness)
