@@ -1,5 +1,8 @@
 const { spawn } = require('child_process');
 
+const isWindows = process.platform === 'win32';
+const pythonCommand = isWindows ? 'python' : 'python3';
+
 exports.updateFreeSlots = (req, res, next) => {
   const parkingScripts = {
     '5c88fa8cf4afda39709c2974': '/parking-python/cb.py',
@@ -10,7 +13,7 @@ exports.updateFreeSlots = (req, res, next) => {
 
   const parking = req.params.id;
   const pythonScriptPath = __dirname + parkingScripts[parking];
-  const pythonProcess = spawn('python', ['-u',pythonScriptPath]);
+  const pythonProcess = spawn(pythonCommand, ['-u',pythonScriptPath]);
   const io = req.app.get('socketio');
 
   pythonProcess.stdout.on('data', (data) => {
