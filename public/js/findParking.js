@@ -83,7 +83,7 @@ export const getParkingsNearMe = async (distance, latlng, unit) => {
   try {
     const res = await axios({
       method: `GET`,
-      url: `http://localhost:3000/api/v1/parkings/parkings-within/${distance}/center/${latlng}/unit/${unit}`,
+      url: `/api/v1/parkings/parkings-within/${distance}/center/${latlng}/unit/${unit}`,
     });
     if (res.data.status === `success`) {
       const parkings = res.data.data.data;

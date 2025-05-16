@@ -50,14 +50,14 @@ export const createParking = async (data, phoneNumber) => {
   try {
     const res = await axios({
       method: `POST`,
-      url: `http://localhost:3000/api/v1/parkings`,
+      url: `/api/v1/parkings`,
       data,
       withCredentials: true,
     });
     if (res.data.status === `success`) {
       await axios({
         method: `PATCH`,
-        url: `http://localhost:3000/api/v1/users/updateRole`,
+        url: `/api/v1/users/updateRole`,
         data: {
           role: `owner`,
         },
@@ -66,7 +66,7 @@ export const createParking = async (data, phoneNumber) => {
       if (phoneNumber) {
         await axios({
           method: `PATCH`,
-          url: `http://localhost:3000/api/v1/users/updateMe`,
+          url: `/api/v1/users/updateMe`,
           data: {
             phoneNumber,
           },

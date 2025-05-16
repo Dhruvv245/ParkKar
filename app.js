@@ -7,6 +7,7 @@ const mongoSanitize = require(`express-mongo-sanitize`);
 const xss = require(`xss-clean`);
 const cors = require(`cors`);
 const cookieParser = require(`cookie-parser`);
+const compression = require('compression');
 
 const parkingRouter = require(`./routes/parkingRouter`);
 const userRouter = require(`./routes/userRouter`);
@@ -72,6 +73,8 @@ app.use(express.json({ limit: `10kb` }));
 app.use(mongoSanitize());
 //Data sanitization against XSS
 app.use(xss());
+
+app.use(compression());
 
 // app.use((req, res, next) => {
 //   console.log(req.cookies);

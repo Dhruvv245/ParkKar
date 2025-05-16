@@ -38,7 +38,7 @@ export const login = async (email, password) => {
   try {
     const res = await axios({
       method: `POST`,
-      url: `http://localhost:3000/api/v1/users/signin`,
+      url: `/api/v1/users/signin`,
       withCredentials: true,
       data: {
         email,
@@ -60,7 +60,7 @@ export const forgotPassword = async (email) => {
   try {
     const res = await axios({
       method: `POST`,
-      url: `http://localhost:3000/api/v1/users/forgotPassword`,
+      url: `/api/v1/users/forgotPassword`,
       data: {
         email,
       },
@@ -77,7 +77,7 @@ export const logout = async () => {
   try {
     const res = await axios({
       method: `GET`,
-      url: `http://localhost:3000/api/v1/users/logout`,
+      url: `/api/v1/users/logout`,
     });
     if (res.data.status === `success`) {
       showAlert(`success`, `Logged out successfully!`);
