@@ -3,11 +3,14 @@ import pickle
 import cvzone
 import numpy as np
 import requests
+import os
 
 # Video feed
-cap = cv2.VideoCapture('D:\ParkKar\ParkKar\controllers\parking-python\cbb.mp4')
+video_path = os.path.join(os.path.dirname(__file__), 'cbb.mp4')
+cap = cv2.VideoCapture(video_path)
 
-with open(r'D:\ParkKar\ParkKar\controllers\parking-python\cbposn', 'rb') as f:
+cbposn_path = os.path.join(os.path.dirname(__file__), 'cbposn')
+with open(cbposn_path, 'rb') as f:
     posList = pickle.load(f)
 
 prev_parking_status = [False] * len(posList)
