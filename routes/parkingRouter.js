@@ -13,6 +13,7 @@ router
 router
   .route(`/distances/:latlng/unit/:unit`)
   .get(parkingController.getDistances);
+router.route(`/stream/:id`).get(freeSlotsController.streamVideo);
 router
   .route(`/`)
   .get(parkingController.getAllParkings)
