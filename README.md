@@ -21,16 +21,32 @@ _A real-time parking detection and management system using AI_
 - **Mapping & Navigation:** Mapbox API
 
 ## 📸 Architecture
-```
- ┌───────────────────┐
- │    Cloud Server   │
- │ (Node.js, MongoDB)│
- └───────────────────┘
-         │
- ┌──────────────────┐
- │   Web Frontend   │
- └──────────────────┘
-```
+                 +------------------+
+                 |  Parking Camera  |
+                 +--------+---------+
+                          |
+                Video Feed (Live or .mp4)
+                          |
+             +------------v-------------+
+             |    Python (OpenCV)       |
+             |  - Detects free/occupied |
+             |  - Sends updates via API|
+             +------------+------------+
+                          |
+                   PATCH /api/parking/:id
+                          |
+          +---------------v----------------+
+          |          Node.js API           |
+          |  - Stores data in MongoDB      |
+          |  - Emits real-time updates     |
+          +----------+----------+----------+
+                     |          |
+                     |          |
+             +-------v--+   +---v--------+
+             | MongoDB  |   |  Frontend  |
+             +----------+   |(Socket.IO) |
+                            +------------+
+
 
 ## 📬 Contact
 For questions, feel free to reach out:
