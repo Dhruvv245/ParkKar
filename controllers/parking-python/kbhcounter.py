@@ -65,7 +65,7 @@ def checkParkingSpace(imgPro):
             data = {
                 "freeSlots" : spaceCounter
             }
-            response = requests.patch('http://127.0.0.1:3000/api/v1/parkings/66166ae48406964c3e58c871', headers=headers, json=data)
+            response = requests.patch('http://127.0.0.1:3000/api/v1/parkings/68700289a320c9d36bd397a4', headers=headers, json=data)
             print(spaceCounter)
             response.raise_for_status()
         except requests.exceptions.RequestException as e:

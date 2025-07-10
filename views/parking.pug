@@ -58,7 +58,7 @@ block content
         .description-box
             h2.heading-secondary.ma-bt-lg= `Free Slots :`
                 p.description__text#freeSlots(data-parkid=`${parking._id}`)= parking.freeSlots > 0 ? `${parking.freeSlots} slots free` : `Sorry, no slots available!`
-                p Booked Slots - #{bookings.length}
+            p Booked Slots - #{bookings.length}
 
             h2.heading-secondary.ma-bt-lg Live Parking Feed
             .video-stream-box
@@ -69,14 +69,15 @@ block content
                     onerror="handleVideoError()"
                 )
                 span#videoErrorMsg(style="display:none;color:#c00;font-weight:bold;") Video stream not available
-            block append scripts
-                script.
-                    function handleVideoError() {
-                        var img = document.getElementById('videoStream');
-                        var msg = document.getElementById('videoErrorMsg');
-                        if(img) img.style.display = 'none';
-                        if(msg) msg.style.display = 'block';
-                    }
+
+        block append scripts
+            script.
+                function handleVideoError() {
+                    var img = document.getElementById('videoStream');
+                    var msg = document.getElementById('videoErrorMsg');
+                    if(img) img.style.display = 'none';
+                    if(msg) msg.style.display = 'block';
+                }
 
     section.section-pictures
         each img,i in parking.images
