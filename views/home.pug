@@ -21,7 +21,9 @@ html(lang="en")
           h5 Book
           h5 your
           h5 slot
-        video(autoplay loop muted, src="/vid/1.mp4")
+        video(autoplay loop muted preload="metadata" poster="/img/video-poster-1.jpg")
+          source(src="/vid/1.mp4" type="video/mp4")
+          | Your browser does not support the video tag.
         .login-page
           .container
             h1 Login
@@ -94,7 +96,9 @@ html(lang="en")
             span क
             span र
       #page3
-        video(autoplay loop muted, src=`/vid/2.mp4`)
+        video(autoplay loop muted preload="metadata" poster="/img/video-poster-2.jpg")
+          source(src="/vid/2.mp4" type="video/mp4")
+          | Your browser does not support the video tag.
         #page3-top
           h2
             span.explore Explore

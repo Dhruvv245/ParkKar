@@ -38,7 +38,8 @@ app.use(
   cors({
     origin: [
       `http://localhost:3000`,
-      `https://parkkar-production.up.railway.app`
+      `https://parkkar-production.up.railway.app`,
+      `https://slot-detection-service-production.up.railway.app`
     ],
     credentials: true,
   })
