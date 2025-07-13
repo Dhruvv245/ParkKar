@@ -89,37 +89,21 @@ _A Smart, AI‑Powered Parking Management & Live Video Streaming System_
 3. Stream updates in sync with slot detection
 
 ---
-📌 Current Features in Production
- Live slot detection and MJPEG feed per lot
-
- Real-time slot update syncing
-
- Socket.IO push updates
-
- Admin + Owner dashboards
-
- Map view with reservation options
 
 🛣️ Roadmap
- Multi-camera fusion
+ -Multi-camera fusion
+ -Slot reservation expiration timers
+ -SMS/Push notification integration
+ -Native mobile app
+ -Enhanced analytics dashboard
 
- Slot reservation expiration timers
 
- SMS/Push notification integration
-
- Native mobile app
-
- Enhanced analytics dashboard
-
- Contact & Support
-📧 Email: chauhandhruv245@gmail.com
-
-🔗 LinkedIn: dhruvchauhan245
+Contact & Support
+  📧 Email: chauhandhruv245@gmail.com
+  🔗 LinkedIn: dhruvchauhan245
 
 📂 Source Code:
-
 Node.js: [parkkar](https://github.com/Dhruvv245/ParkKar)
-
 Python Microservice: [slot-detection](https://github.com/Dhruvv245/parkkar-slotdetection-microservice)
 
 
