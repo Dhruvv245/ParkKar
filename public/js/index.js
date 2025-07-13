@@ -23,10 +23,12 @@ import { locoScroll } from './script';
 import { cursorEffect } from './script';
 import { sliderAnimaton } from './script';
 import { loader } from './script';
+import { optimizeVideos } from './script';
 
 locoScroll();
 cursorEffect();
 sliderAnimaton();
+optimizeVideos();
 if (document.getElementById(`loader`)) {
   loader();
 }

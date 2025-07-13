@@ -109,3 +109,40 @@ export const loader = () => {
     display: 'none',
   });
 };
+
+// Video optimization for better loading experience
+export const optimizeVideos = () => {
+  const videos = document.querySelectorAll('video');
+
+  videos.forEach((video) => {
+    // Handle video loading errors
+    video.addEventListener('error', function () {
+      console.warn('Video failed to load:', this.src);
+      this.style.display = 'none';
+    });
+
+    // Optimize playback for mobile - set preload to metadata for better performance
+    video.preload = 'metadata';
+    
+    // Ensure video plays smoothly once loaded
+    video.addEventListener('loadeddata', function() {
+      if (this.paused) {
+        this.play().catch(e => console.log('Video autoplay prevented:', e));
+      }
+    });
+  });
+
+  // Additional optimization: Load videos when page is fully loaded
+  window.addEventListener('load', function () {
+    const videos = document.querySelectorAll('video');
+    videos.forEach((video) => {
+      // Set a small timeout to prevent blocking the main thread
+      setTimeout(() => {
+        if (video.readyState < 2) {
+          // If not loaded enough, trigger load
+          video.load();
+        }
+      }, 500);
+    });
+  });
+};

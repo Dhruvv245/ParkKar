@@ -51,22 +51,12 @@ body {
   width: 100%;
   object-fit: cover;
   position: absolute;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-#page1 video.loaded {
-  opacity: 1;
 }
 #page3 video {
   height: 100%;
   width: 100%;
   object-fit: cover;
   position: absolute;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-#page3 video.loaded {
-  opacity: 1;
 }
 #page1-content {
   height: 100%;
