@@ -7,13 +7,13 @@ const reviewRouter = require(`./reviewRouter`);
 const router = express.Router();
 
 router.use(`/:parkingId/reviews`, reviewRouter);
+router.post('/slot-update', freeSlotsController.receiveSlotUpdate);
 router
   .route(`/parkings-within/:distance/center/:latlng/unit/:unit`)
   .get(parkingController.getParkingsWithin);
 router
   .route(`/distances/:latlng/unit/:unit`)
   .get(parkingController.getDistances);
-router.route(`/stream/:id`).get(freeSlotsController.streamVideo);
 router
   .route(`/`)
   .get(parkingController.getAllParkings)
@@ -25,7 +25,7 @@ router
   );
 router
   .route(`/:id`)
-  .get(freeSlotsController.updateFreeSlots, parkingController.getParking)
+  .get(parkingController.getParking)
   .patch(
     authController.protect,
     authController.restrictTo(`admin`, `owner`),

@@ -1,9 +1,9 @@
 import io from 'socket.io-client';
-import axios from 'axios';
-export const freeSlotsUpdate = async (id) => {
-  await axios(`/api/v1/parkings/${id}`);
+
+export const freeSlotsUpdate = (id) => {
   const socket = io();
-  socket.on('freeSlotsUpdate', (slots) => {
+  socket.on(`freeSlotsUpdate-${id}`, (data) => {
+    const slots = data?.freeSlots;
     if (isNaN(slots)) {
       document.getElementById('freeSlots').innerText =
         'Error in getting free slots. Please try again later.';
@@ -15,5 +15,9 @@ export const freeSlotsUpdate = async (id) => {
             : slots + ' slot free'
           : 'Sorry, no slots available!';
     }
+  });
+
+  socket.on('connect_error', (err) => {
+    console.error('Socket connection failed:', err.message);
   });
 };

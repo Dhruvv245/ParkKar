@@ -5,10 +5,17 @@
   "main": "app.js",
   "scripts": {
     "start": "node server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js",
+    "start:prod": "NODE_ENV=production node server.js",
+    "start:dev": "nodemon server.js",
     "debug": "ndb server.js",
     "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
+    "docker:build": "docker build -t parkkar-app .",
+    "docker:run": "docker-compose up",
+    "docker:run:prod": "docker-compose -f docker-compose.prod.yml up",
+    "docker:stop": "docker-compose down",
+    "docker:clean": "docker-compose down -v",
+    "docker:logs": "docker-compose logs -f app"
   },
   "author": "Dhruv Chauhan",
   "license": "ISC",

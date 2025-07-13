@@ -81,6 +81,15 @@ app.use(compression());
 //   next();
 // });
 
+// Health check endpoint for Docker
+app.get('/health', (req, res) => {
+  res.status(200).json({
+    status: 'success',
+    message: 'Service is healthy',
+    timestamp: new Date().toISOString(),
+  });
+});
+
 app.use(`/`, viewRouter);
 app.use(`/api/v1/parkings`, parkingRouter);
 app.use(`/api/v1/users`, userRouter);
