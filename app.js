@@ -18,6 +18,9 @@ const AppError = require(`./utils/appError`);
 
 const app = express();
 
+// Trust proxy when deployed on cloud platforms (Railway, Heroku, etc.)
+app.set('trust proxy', 1);
+
 //Setting the view engine
 app.set(`view engine`, `pug`);
 app.set(`views`, path.join(__dirname, `views`));
@@ -33,7 +36,10 @@ app.use(express.static(path.join(__dirname, `public`)));
 //Implement CORS
 app.use(
   cors({
-    origin: `http://localhost:3000`,
+    origin: [
+      `http://localhost:3000`,
+      `https://parkkar-production.up.railway.app`
+    ],
     credentials: true,
   })
 );
